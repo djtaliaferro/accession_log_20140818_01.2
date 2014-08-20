@@ -1,0 +1,29 @@
+<h1>Listing accession_logs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date received</th>
+      <th>Date received physicians office</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @accession_logs.each do |accession_log| %>
+      <tr>
+        <td><%= accession_log.date_received %></td>
+        <td><%= accession_log.date_received_physicians_office %></td>
+        <td><%= accession_log.user %></td>
+        <td><%= link_to 'Show', accession_log %></td>
+        <td><%= link_to 'Edit', edit_accession_log_path(accession_log) %></td>
+        <td><%= link_to 'Destroy', accession_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Accession log', new_accession_log_path %>

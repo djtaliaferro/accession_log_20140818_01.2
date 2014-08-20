@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date received:</strong>
+  <%= @accession_log.date_received %>
+</p>
+
+<p>
+  <strong>Date received physicians office:</strong>
+  <%= @accession_log.date_received_physicians_office %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @accession_log.user %>
+</p>
+
+<%= link_to 'Edit', edit_accession_log_path(@accession_log) %> |
+<%= link_to 'Back', accession_logs_path %>

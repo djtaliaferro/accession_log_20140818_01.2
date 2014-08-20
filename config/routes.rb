@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :accession_logs
+
   resources :accounts
 
   resources :patients
