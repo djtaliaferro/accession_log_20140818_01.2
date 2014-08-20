@@ -1,4 +1,8 @@
 class AccessionLogsController < ApplicationController
+
+  #->Prelang (scaffolding:rails/scope_to_user)
+  before_filter :require_user_signed_in, only: [:new, :edit, :create, :update, :destroy]
+
   before_action :set_accession_log, only: [:show, :edit, :update, :destroy]
 
   # GET /accession_logs
