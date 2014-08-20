@@ -1,4 +1,5 @@
 ActiveAdmin.register Patient do
+  permit_params :first_name, :last_name, :ssn, :date_of_birth
 
 
   # See permitted parameters documentation:
