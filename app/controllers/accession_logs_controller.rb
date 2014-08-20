@@ -29,6 +29,7 @@ class AccessionLogsController < ApplicationController
   # POST /accession_logs.json
   def create
     @accession_log = AccessionLog.new(accession_log_params)
+    @accession_log.user = current_user
 
     respond_to do |format|
       if @accession_log.save
