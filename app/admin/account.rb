@@ -1,4 +1,5 @@
 ActiveAdmin.register Account do
+  permit_params :prefix, :company_name
 
 
   # See permitted parameters documentation:
