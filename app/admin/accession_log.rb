@@ -1,4 +1,5 @@
 ActiveAdmin.register AccessionLog do
+  permit_params :date_received, :date_received_physicians_office
 
 
   # See permitted parameters documentation:
